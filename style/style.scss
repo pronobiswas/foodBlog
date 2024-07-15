@@ -1,0 +1,286 @@
+$white:#fff;
+// =========common code========= 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    max-width: 1144px;
+    margin:0 auto;
+}
+ul,ol{
+    list-style-type: none;
+}
+h1,h2,h3,h4,h5,h6,p{line-height: .9;}
+h1{font-size: 56px;}
+img{
+    width: 100%;
+    height: 100%;
+    // object-fit: cover;
+}
+
+// =========common code=========
+
+header{
+    width: 100%;
+    // background: rgba(0, 0, 255, 0.156);
+    
+    nav{
+        width: 100%;
+        display: flex;
+        gap: 95px;
+        align-items: center;
+        .logo{
+            width: 200px;
+            height: 90px;
+            padding: 8px;
+        }
+        ul{
+            display: flex;
+            gap: 50px;
+
+        }
+    }
+}
+
+section#banner{
+width: 100%;
+height: 100%;
+padding: 0 25px;
+background-color: aliceblue;
+background-image: url('https://th.bing.com/th/id/R.893b18053d7ef46366c56c9745312ae2?rik=Hku76T7JnO1UtQ&pid=ImgRaw&r=0');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+overflow-y: hidden;
+.bannerwarper{
+    display: flex;
+    padding: 110px 0;
+    .banerContent{
+        width: 100%;
+        text-align: center;
+        // background: green;
+        h1{
+            font-size: 56px;
+            font-family: sans-serif;
+            font-weight: 800;
+            color: $white;
+            -webkit-text-stroke: 1px  red;
+            text-shadow: 5px -1px 3px #ce5a37;
+            margin-bottom: 10px;
+        }
+        h2{
+            font-size: 36px;
+            font-weight: 800;
+            font-family: sans-serif;
+            margin-bottom: 30px;
+            color: $white;
+            -webkit-text-stroke: 1px  red;
+            text-shadow: 5px -1px 3px #ce5a37;
+        }
+        p{
+            width: 450px;
+            padding-bottom: 40px;
+            margin: 0 auto;
+            font-size: 23px;
+            font-weight: 800;
+            font-family: "Whisper", cursive;
+            color: $white;
+            line-height: 1.2;
+            background: -webkit-linear-gradient(#ffffff, #19b1fd,rgb(204, 0, 255),rgb(151, 170, 249));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 1px -1px 1px #ffffff;
+            
+        }
+        .btnbx{
+            width: 100%;
+            // margin-bottom: 30px;
+            button{
+                background: red;
+                border: 1px solid transparent;
+                outline: 1px solid transparent;
+                padding: 8px 38px;
+                font-size: 20px;
+                color: white;
+            }
+        }
+        .r{
+            width: 100%;
+            
+
+            .extra{
+                width: 500px;
+                height: 40px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .linebox{
+                    width: 220px;
+                    height: 34px;
+                    // background: red;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    justify-content: center;
+                    &:first-child{
+                        align-items: end;
+                    }
+                    .line{
+                        width: 100%;
+                        height: 3px;
+                        background: $white;
+                        &:nth-child(2){
+                            width: 90%;
+                        }
+                        &:last-child{
+                            width: 80%;
+                        }
+                    }
+                }
+                .lineIcon{
+                    width: 60px;
+                    height: 32px;
+                    font-size: 32px;
+                    color: $white;
+                }
+            }
+        }
+    }
+    
+}
+}
+#FAQ{
+    padding: 50px 0;
+    h1{text-align: center;}
+}
+.faqmain{
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .wapper{
+        width: 600px;
+    }
+}
+
+.accordion .accordion-item {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .accordion .accordion-item button[aria-expanded='true'] {
+    // border-bottom: 1px solid #03b5d2;
+  }
+  
+  .accordion button {
+    position: relative;
+    display: block;
+    text-align: left;
+    width: 100%;
+    padding: 1em 0;
+    color: #2b405a;
+    font-size: 1.15rem;
+    font-weight: 400;
+    border: none;
+    background: none;
+    outline: none;
+  }
+  
+  .accordion button:hover,
+  .accordion button:focus {
+    cursor: pointer;
+    color: #03b5d2;
+  }
+  
+  .accordion button:hover::after,
+  .accordion button:focus::after {
+    cursor: pointer;
+    color: #03b5d2;
+    border: 1px solid #03b5d2;
+  }
+  
+  .accordion button .accordion-title {
+    padding: 1em 1.5em 1em 0;
+  }
+  
+  .accordion button .icon {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 22px;
+    height: 22px;
+    border: 1px solid;
+    border-radius: 22px;
+  }
+  
+  .accordion button .icon::before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 9px;
+    left: 5px;
+    width: 10px;
+    height: 2px;
+    background: currentColor;
+  }
+  .accordion button .icon::after {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: 9px;
+    width: 2px;
+    height: 10px;
+    background: currentColor;
+  }
+  
+  .accordion button[aria-expanded='true'] {
+    color: #03b5d2;
+  }
+  .accordion button[aria-expanded='true'] .icon::after {
+    width: 0;
+  }
+  .accordion button[aria-expanded='true'] + .accordion-content {
+    opacity: 1;
+    max-height: 9em;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+  }
+  .accordion .accordion-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 200ms linear, max-height 200ms linear;
+    will-change: opacity, max-height;
+  }
+  .accordion .accordion-content p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2em 0;
+  }
+
+
+  #galary{
+    .galaryHeader{
+
+    }
+    .galaryWarper{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        .galaryItems{
+            width: 30%;
+            height: 300px;
+            background: #000;
+            
+        }
+    }
+  }
