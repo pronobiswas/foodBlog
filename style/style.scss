@@ -154,6 +154,108 @@ overflow-y: hidden;
     
 }
 }
+.menuItem{
+    .blogCardWarpper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+        gap: 20px;
+        .blogCard{
+            width: 25%;
+            box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.2) inset;
+            -webkit-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.2) inset;
+            -moz-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.2) inset;
+            border-radius: 14px;
+            overflow: hidden;
+            
+            &:hover{box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.4) ;
+                -webkit-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.4) ;
+                -moz-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.4) ;
+                transition: .2s all linear;
+            }
+            .blogImg{
+                width: 100%;
+                height: 150px;
+            }
+            .itemDetails{
+                width: 100%;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .detail{
+                    p{padding-bottom: 5px;}
+                }
+            }
+        }
+    }
+}
+
+#review{
+    padding: 80px 10px;
+    .htxt{
+        font-size: 36px;
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+    }
+    .reViewWarpper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .clintReview{
+            width: 100%;
+            max-width: 800px;
+            ul{
+                // background: rgba(255, 0, 0, 0.361);
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                li{
+                    width: 45%;
+                    &>div{
+                        width: 100%;
+                        padding: 12px;
+                        display: flex;
+                        gap: 12px;
+                        border: 2px solid transparent;
+                        border-image: repeating-linear-gradient( 45deg,  #fd627c , purple , rgb(2, 192, 183)) 10;
+                        border-radius: 100px;
+                        .profileImg{
+                            width: 60px;
+                            height: 60px;
+                            background-color: #000;
+                            border-radius: 50%;
+                        }
+                        .reviewtxt{
+                            i{
+                                display: inline-block;
+                                font-size: 12px;
+                                padding-top: 6px;
+                                line-height: 1.2;
+                                color: rgb(48, 48, 48);
+                                margin-bottom: 8px;
+                            }
+                            p{
+                                span{
+                                    color: yellow;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
 #FAQ{
     padding: 50px 0;
     h1{text-align: center;}
@@ -268,7 +370,22 @@ overflow-y: hidden;
 
   #galary{
     .galaryHeader{
-
+        text-align: center;
+        padding-bottom: 40px;
+        h1{
+            margin-bottom: 20px;
+        }
+        p{
+            max-width: 480px;
+            margin: 0 auto;
+            font-size: 17px;
+            margin-bottom: 20px;
+        }
+        a{
+            display: inline-block;
+            padding: 6px 12px;
+            border: 1px solid gray;
+        }
     }
     .galaryWarper{
         display: flex;
@@ -276,11 +393,104 @@ overflow-y: hidden;
         gap: 20px;
         justify-content: center;
         align-items: center;
+        padding: 20px 0;
         .galaryItems{
             width: 30%;
             height: 300px;
             background: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            .overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #00000060;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                opacity: 0;
+                h3{
+                    text-align: center;
+                    border: 2px solid rgb(220, 220, 220);
+                    line-height: .8;
+                    padding: 8px 25px;
+                    color: #6801c9;
+                    text-shadow: 1px 2px 5px rgb(183, 183, 183);
+                    -webkit-text-stroke: 1px rgb(255, 255, 255);
+                    background-color: #aeaeae8e;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: black;
+                    }
+                }
+                
+            }
             
+            &:hover .overlay{
+                opacity: 1;
+                transition: .2s all linear;
+            }
+        }
+    }
+  }
+
+  #blog{
+    width: 100%;
+    padding: 50px 10px;
+    .blogBanneer{
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        aside{
+            width: 100%;
+            h2{
+                font-size: 36px;
+                padding-bottom: 20px;
+            }
+            h4{
+                line-height: 1.1;
+            }
+            p{
+                padding: 10px 0;
+                line-height: 1.2;
+            }
+        }
+        
+    }
+    .blogCardWarpper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 40px 0;
+        gap: 20px;
+        .blogCard{
+            width: 25%;
+            box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.2) inset;
+            -webkit-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.2) inset;
+            -moz-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.2) inset;
+            border-radius: 14px;
+            overflow: hidden;
+            &:hover{box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.4) ;
+                -webkit-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.4) ;
+                -moz-box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.4) ;}
+            .blogImg{
+                width: 100%;
+                height: 150px;
+            }
+            .itemDetails{
+                width: 100%;
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .detail{
+                    p{padding-bottom: 5px;}
+                }
+            }
         }
     }
   }

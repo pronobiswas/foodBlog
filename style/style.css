@@ -149,6 +149,97 @@ section#banner .bannerwarper .banerContent .r .extra .lineIcon {
   color: #fff;
 }
 
+.menuItem .blogCardWarpper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  gap: 20px;
+}
+.menuItem .blogCardWarpper .blogCard {
+  width: 25%;
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.2) inset;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.menuItem .blogCardWarpper .blogCard:hover {
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.4);
+  transition: 0.2s all linear;
+}
+.menuItem .blogCardWarpper .blogCard .blogImg {
+  width: 100%;
+  height: 150px;
+}
+.menuItem .blogCardWarpper .blogCard .itemDetails {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menuItem .blogCardWarpper .blogCard .itemDetails .detail p {
+  padding-bottom: 5px;
+}
+
+#review {
+  padding: 80px 10px;
+}
+#review .htxt {
+  font-size: 36px;
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+#review .reViewWarpper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#review .reViewWarpper .clintReview {
+  width: 100%;
+  max-width: 800px;
+}
+#review .reViewWarpper .clintReview ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#review .reViewWarpper .clintReview ul li {
+  width: 45%;
+}
+#review .reViewWarpper .clintReview ul li > div {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  gap: 12px;
+  border: 2px solid transparent;
+  border-image: repeating-linear-gradient(45deg, #fd627c, purple, rgb(2, 192, 183)) 10;
+  border-radius: 100px;
+}
+#review .reViewWarpper .clintReview ul li > div .profileImg {
+  width: 60px;
+  height: 60px;
+  background-color: #000;
+  border-radius: 50%;
+}
+#review .reViewWarpper .clintReview ul li > div .reviewtxt i {
+  display: inline-block;
+  font-size: 12px;
+  padding-top: 6px;
+  line-height: 1.2;
+  color: rgb(48, 48, 48);
+  margin-bottom: 8px;
+}
+#review .reViewWarpper .clintReview ul li > div .reviewtxt p span {
+  color: yellow;
+}
+
 #FAQ {
   padding: 50px 0;
 }
@@ -264,15 +355,126 @@ section#banner .bannerwarper .banerContent .r .extra .lineIcon {
   margin: 2em 0;
 }
 
+#galary .galaryHeader {
+  text-align: center;
+  padding-bottom: 40px;
+}
+#galary .galaryHeader h1 {
+  margin-bottom: 20px;
+}
+#galary .galaryHeader p {
+  max-width: 480px;
+  margin: 0 auto;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+#galary .galaryHeader a {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid gray;
+}
 #galary .galaryWarper {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
   align-items: center;
+  padding: 20px 0;
 }
 #galary .galaryWarper .galaryItems {
   width: 30%;
   height: 300px;
   background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+#galary .galaryWarper .galaryItems .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3764705882);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+#galary .galaryWarper .galaryItems .overlay h3 {
+  text-align: center;
+  border: 2px solid rgb(220, 220, 220);
+  line-height: 0.8;
+  padding: 8px 25px;
+  color: #6801c9;
+  text-shadow: 1px 2px 5px rgb(183, 183, 183);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  background-color: rgba(174, 174, 174, 0.5568627451);
+  cursor: pointer;
+}
+#galary .galaryWarper .galaryItems .overlay h3:hover {
+  background-color: black;
+}
+#galary .galaryWarper .galaryItems:hover .overlay {
+  opacity: 1;
+  transition: 0.2s all linear;
+}
+
+#blog {
+  width: 100%;
+  padding: 50px 10px;
+}
+#blog .blogBanneer {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+#blog .blogBanneer aside {
+  width: 100%;
+}
+#blog .blogBanneer aside h2 {
+  font-size: 36px;
+  padding-bottom: 20px;
+}
+#blog .blogBanneer aside h4 {
+  line-height: 1.1;
+}
+#blog .blogBanneer aside p {
+  padding: 10px 0;
+  line-height: 1.2;
+}
+#blog .blogCardWarpper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  gap: 20px;
+}
+#blog .blogCardWarpper .blogCard {
+  width: 25%;
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.2) inset;
+  border-radius: 14px;
+  overflow: hidden;
+}
+#blog .blogCardWarpper .blogCard:hover {
+  box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.4);
+}
+#blog .blogCardWarpper .blogCard .blogImg {
+  width: 100%;
+  height: 150px;
+}
+#blog .blogCardWarpper .blogCard .itemDetails {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#blog .blogCardWarpper .blogCard .itemDetails .detail p {
+  padding-bottom: 5px;
 }/*# sourceMappingURL=style.css.map */
